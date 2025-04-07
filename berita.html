@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Berita Pac Bontoala</title>
+    <link rel="stylesheet" href="css/berita.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="IPNU GRADIASI.png">
+</head>
+<body>
+    <header id="header">
+        <div class="container">
+          <!-- Sidebar Toggle Button -->
+          <button class="sidebar-toggle">
+            <i class="fas fa-bars"></i>
+          </button>
+          <div class="logo">
+            <span class="ipnu">IPNU</span><span class="bontoala">BONTOALA</span>
+          </div>
+          <nav>
+            <ul class="nav-links">
+              <li><a href="index.html">HOME</a></li>
+              <li><a href="sejarah.html">SEJARAH</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropbtn">PROFIL <i class="fa-solid fa-caret-down"></i></a>
+              <ul class="dropdown-content">
+                <li><a href="profil-pac.html">Profil PAC IPNU Bontoala</a></li>
+               <li><a href="#">Program</a></li>
+                <li><a href="struktur.html">Struktur</a></li>
+              </ul>
+            </li>
+              <li><a href="berita.html" class="active">BERITA</a></li>
+              <li><a href="#data">DATA</a></li>
+            </ul>
+          </nav>
+          <div class="navbar-right">
+            <div class="social-icons2">
+              <a href="#" class="social-icon2 whatsapp2">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+              <a href="#" class="social-icon2 instagram2">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="#" class="social-icon2 facebook2">
+                <i class="fa-brands fa-facebook"></i>
+              </a>
+            </div>
+          </div>
+          <!-- Sidebar -->
+          <div class="sidebar-overlay"></div>
+          <div class="sidebar">
+            <div class="sidebar-header">
+              <div class="sidebar-logo">
+                <span class="ipnu">IPNU</span><span class="bontoala">BONTOALA</span>
+              </div>
+              <button class="close-sidebar">
+                <i class="fas fa-times"></i>
+              </button>
+            </div>
+            <div class="sidebar-content">
+              <nav class="sidebar-nav">
+                <ul class="sidebar-nav-links">
+                  <li><a href="index.html" >HOME</a></li>
+                  <li><a href="sejarah.html">SEJARAH</a></li>
+                  <li class="sidebar-dropdown">
+                    <a href="#" class="sidebar-dropbtn" onclick="toggleSidebarDropdown(event)">PROFIL <i class="fa-solid fa-caret-down"></i></a>
+                    <ul class="sidebar-dropdown-content">
+                      <li><a href="profil-pac.html">Profil PAC IPNU Bontoala</a></li>
+                      <li><a href="#">Program</a></li>
+                      <li><a href="struktur.html">Struktur</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="berita.html" class="active" >BERITA</a></li>
+                  <li><a href="#data">DATA</a></li>
+                </ul>
+              </nav>
+            </div>
+            <div class="sidebar-footer">
+              <div class="social-icons">
+                <a href="#" class="social-icon whatsapp1">
+                  <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="#" class="social-icon instagram1">
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="social-icon facebook1">
+                  <i class="fa-brands fa-facebook"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="background-svg">
+        <svg id="visual" viewBox="0 0 900 600" width="900" height="600" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+            <!-- Gelombang pertama (terbawah) -->
+            <path d="M0 134L21.5 143.2C43 152.3 86 170.7 128.8 174.2C171.7 177.7 214.3 166.3 257.2 160.5C300 154.7 343 154.3 385.8 156.5C428.7 158.7 471.3 163.3 514.2 161.7C557 160 600 152 642.8 151.2C685.7 150.3 728.3 156.7 771.2 162.2C814 167.7 857 172.3 878.5 174.7L900 177V0H0Z" fill="#4b9e62 " />
+            <!-- Gelombang kedua -->
+            <path d="M0 145L21.5 142.2C43 139.3 86 133.7 128.8 137.7C171.7 141.7 214.3 155.3 257.2 153.3C300 151.3 343 133.7 385.8 124C428.7 114.3 471.3 112.7 514.2 120.7C557 128.7 600 146.3 642.8 152.2C685.7 158 728.3 152 771.2 148.5C814 145 857 144 878.5 143.5L900 143V0H0Z" fill="#62aa76  " />
+            <!-- Gelombang ketiga -->
+            <path d="M0 133L21.5 135.3C43 137.7 86 142.3 128.8 141.5C171.7 140.7 214.3 134.3 257.2 126C300 117.7 343 107.3 385.8 110.3C428.7 113.3 471.3 129.7 514.2 130.3C557 131 600 116 642.8 113.5C685.7 111 728.3 121 771.2 126.2C814 131.3 857 131.7 878.5 131.8L900 132V0H0Z" fill="#8fc29d " />
+            <!-- Gelombang keempat -->
+            <path d="M0 108L21.5 106.8C43 105.7 86 103.3 128.8 99.5C171.7 95.7 214.3 90.3 257.2 85.2C300 80 343 75 385.8 76.7C428.7 78.3 471.3 86.7 514.2 91.5C557 96.3 600 97.7 642.8 97C685.7 96.3 728.3 93.7 771.2 94.2C814 94.7 857 98.3 878.5 100.2L900 102V0H0Z" fill="#8fc29d " />
+            <!-- Gelombang kelima -->
+            <path d="M0 64L21.5 60.7C43 57.3 86 50.7 128.8 51C171.7 51.3 214.3 58.7 257.2 65C300 71.3 343 76.7 385.8 72.3C428.7 68 471.3 54 514.2 53.5C557 53 600 66 642.8 72C685.7 78 728.3 77 771.2 72.8C814 68.7 857 61.3 878.5 57.7L900 54V0H0Z" fill="#a5cfb1 " />
+            <!-- Gelombang keenam (teratas) -->
+            <path d="M0 47L21.5 47.8C43 48.7 86 50.3 128.8 46.5C171.7 42.7 214.3 33.3 257.2 32.8C300 32.3 343 40.7 385.8 42.2C428.7 43.7 471.3 38.3 514.2 33.3C557 28.3 600 23.7 642.8 20.5C685.7 17.3 728.3 15.7 771.2 15.3C814 15 857 16 878.5 16.5L900 17V0H0Z" fill="#bcdbc4" />
+        </svg>
+
+        <section id="berita" class="about-section slide-in">
+            <div class="container-title container">
+                <h1 class="hero-title">BERITA</h1>
+                <div class="benefits-container">
+                    <div class="benefit-card card-color1">
+                      <h3>Mengasah Kritisisme</h3>
+                      <p>Berita membantu melatih kemampuan kritis dalam mengevaluasi informasi, membedakan fakta dari opini, serta memahami berbagai sudut pandang sehingga dapat membuat keputusan yang lebih baik.</p>
+                    </div>
+                    <div class="benefit-card card-color2">
+                      <h3>Menambah Wawasan</h3>
+                      <p>Membaca berita secara teratur memperluas pengetahuan tentang berbagai topik, termasuk politik, ekonomi, dan budaya, sehingga memperkaya wawasan dan pemahaman tentang dunia.</p>
+                    </div>
+                    <div class="benefit-card card-color3">
+                      <h3>Stay Updated</h3>
+                      <p>Dengan membaca berita, seseorang tetap terinformasi tentang peristiwa terbaru dan tren yang berpengaruh, memungkinkan mereka untuk terlibat dalam percakapan yang relevan dan mempersiapkan diri terhadap perubahan di sekitar mereka.</p>
+                    </div>
+                  </div>
+                  <div class="berita-grid">
+                    <!-- Post 1 -->
+                    <div class="berita-post">
+                        <div class="post-image">
+                          <span class="tag">IPNU</span>
+                          <img src="img/instagram_1.jpg" alt="img">
+                        </div>
+                        <a href="berita-post-1.html" class="view-more">Read More »</a>
+                        <div class="post-content">
+                          <p class="post-tgl" data-tanggal="2025-03-30T08:15:00"></p>
+                            <p class="post-title"><u>selamat & sukses rekan rekanita Telah lolos jalur SPAN-PTKIN</u></p>
+                            <p class="post-description">Alhamdulilah! Selamat atas keberhasilan</p>
+                            <p class="post-quote">rekan rekanita lolos seleksi semoga Allah SWT senantiasa memberkahi dan melindungi, sukses selalu</p>
+                        </div>
+                        <div class="post-footer">
+                            <div class="hashtags">
+                                <p>.No Comments</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Post 2 -->
+                    <div class="berita-post">
+                        <div class="post-image">
+                          <span class="tag">IPNU</span>
+                          <img src="img/instagram1.jpg" alt="img">
+                        </div>
+                        <a href="berita-post-2.html" class="view-more">Read More »</a>
+                        <div class="post-content">
+                          <p class="post-tgl" data-tanggal="2024-03-25T14:30:00"></p>
+                            <p class="post-title"><u>Selamat dan sukses rekan Raja Muhammad Surya</u></p>
+                            <p class="post-description">Semoga kemenangan ini dapat menjadi</p>
+                            <p class="post-quote">motivasi bagi rekan-rekan lainnya untuk terus berjuang dan meningkatkan kemampuan mereka dalam mempelajari Al-Qur’an.</p>
+                        </div>
+                        <div class="post-footer">
+                            <div class="hashtags">
+                                <p>.No Comments</p>
+                            </div>
+                        </div>
+                    </div>
+                     <!-- Post 3 -->
+                    <div class="berita-post">
+                        <div class="post-image">
+                          <span class="tag">IPNU</span>
+                          <img src="img/instagram_4.jpg" alt="img">
+                        </div>
+                        <a href="berita-post-3.html" class="view-more">Read More »</a>
+                        <div class="post-content">
+                          <p class="post-tgl" data-tanggal="2025-03-19"></p>
+                            <p class="post-title"><u> PRA PELANTIKAN PAC IPNU-IPPNU BONTOALAN</u></p>
+                            <p class="post-description">Menjelang pelantikan, semangat para</p>
+                            <p class="post-quote"> pengurus baru semakin berkobar, Kegiatan Pra Pelantikan menjadi langkah awal dalam mempersiapkan kepengurusan yang solid, memahami tugas dan tanggung jawab, serta memperkuat komitmen dalam berkhidmat.</p>
+                        </div>
+                        <div class="post-footer">
+                            <div class="hashtags">
+                                <p>.No Comments</p>
+                            </div>
+                        </div>
+                    </div>
+                 </div>
+             </div>
+         </section>
+
+
+      <footer class="footer-section fade-in">
+        <div class="container">
+          <div class="footer-content">
+            <div class="footer-about">
+              <div class="footer-logo">
+                <img src="logo ipnu.png" alt="IPNU Logo">
+                <h3>IPNU BONTOALA</h3>
+              </div>
+            </div>
+            <div class="footer-contact">
+              <h3>Kontak Info</h3>
+              <ul>
+                <li>
+                  <i class="fa-solid fa-location-dot"></i>
+                  <p>Jl. Perintis Kemerdekaan No. 123, Tamalanrea, Kota Makassar, Sulawesi Selatan, 90245</p>
+                </li>
+                <li>
+                  <i class="fa-solid fa-phone"></i>
+                  <p>+62 812-3456-7890</p>
+                </li>
+                <li>
+                  <i class="fa-solid fa-envelope"></i>
+                  <p>info@ipnubontoala.org</p>
+                </li>
+              </ul>
+            </div>
+            <div class="footer-map">
+              <h3>Lokasi</h3>
+              <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15879.064429750222!2d119.41196184303046!3d-5.133099235116642!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dbee1748cfc07a5%3A0xf269b3341210c7a9!2sBontoala%2C%20Kota%20Makassar%2C%20Sulawesi%20Selatan!5e0!3m2!1sid!2sid!4v1694531021826!5m2!1sid!2sid" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <p>© 2025 PAC IPNU Kec.Botoala . All rights reserved.</p>
+            <button id="scroll-top" class="scroll-top-btn">
+              <i class="fa-solid fa-arrow-up"></i>
+            </button>
+          </div>
+        </div>
+      </footer>
+      <script src="js/berita.js"></script>
+</body>
+</html>

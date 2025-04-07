@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PROFIL PAC IPNU BONTOALA</title>
+        <link rel="stylesheet" href="css/profil-pac.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="icon" type="image/png" href="IPNU GRADIASI.png">
+    </head>
+<body>
+    <header id="header">
+        <div class="container">
+          <!-- Sidebar Toggle Button -->
+          <button class="sidebar-toggle">
+            <i class="fas fa-bars"></i>
+          </button>
+          <div class="logo">
+            <span class="ipnu">IPNU</span><span class="bontoala">BONTOALA</span>
+          </div>
+          <nav>
+            <ul class="nav-links">
+              <li><a href="index.html">HOME</a></li>
+              <li><a href="sejarah.html">SEJARAH</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropbtn active">PROFIL <i class="fa-solid fa-caret-down"></i></a>
+              <ul class="dropdown-content">
+                <li><a href="profil-pac.html" class="active">Profil PAC IPNU Bontoala</a></li>
+               <li><a href="#">Program</a></li>
+                <li><a href="struktur.html">Struktur</a></li>
+              </ul>
+            </li>
+              <li><a href="berita.html">BERITA</a></li>
+              <li><a href="#data">DATA</a></li>
+            </ul>
+          </nav>
+          <div class="navbar-right">
+            <div class="social-icons2">
+              <a href="#" class="social-icon2 whatsapp2">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+              <a href="#" class="social-icon2 instagram2">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="#" class="social-icon2 facebook2">
+                <i class="fa-brands fa-facebook"></i>
+              </a>
+            </div>
+          </div>
+          <!-- Sidebar -->
+          <div class="sidebar-overlay"></div>
+          <div class="sidebar">
+            <div class="sidebar-header">
+              <div class="sidebar-logo">
+                <span class="ipnu">IPNU</span><span class="bontoala">BONTOALA</span>
+              </div>
+              <button class="close-sidebar">
+                <i class="fas fa-times"></i>
+              </button>
+            </div>
+            <div class="sidebar-content">
+              <nav class="sidebar-nav">
+                <ul class="sidebar-nav-links">
+                  <li><a href="index.html" >HOME</a></li>
+                  <li><a href="sejarah.html">SEJARAH</a></li>
+                  <li class="sidebar-dropdown">
+                    <a href="#" class="sidebar-dropbtn" onclick="toggleSidebarDropdown(event)">PROFIL <i class="fa-solid fa-caret-down"></i></a>
+                    <ul class="sidebar-dropdown-content">
+                      <li><a href="profil-pac.html" class="active">Profil PAC IPNU Bontoala</a></li>
+                      <li><a href="#">Program</a></li>
+                      <li><a href="struktur.html">Struktur</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="berita.html">BERITA</a></li>
+                  <li><a href="#data">DATA</a></li>
+                </ul>
+              </nav>
+            </div>
+            <div class="sidebar-footer">
+              <div class="social-icons">
+                <a href="#" class="social-icon whatsapp1">
+                  <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="#" class="social-icon instagram1">
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="social-icon facebook1">
+                  <i class="fa-brands fa-facebook"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="background-svg">
+        <svg id="visual" viewBox="0 0 900 600" width="900" height="600" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+            <path d="M0 188L21.5 188C43 188 86 188 128.8 197.5C171.7 207 214.3 226 257.2 220.5C300 215 343 185 385.8 178.8C428.7 172.7 471.3 190.3 514.2 199.8C557 209.3 600 210.7 642.8 209C685.7 207.3 728.3 202.7 771.2 203.3C814 204 857 210 878.5 213L900 216L900 0L0 0Z" fill="#009473"></path>
+            <path d="M0 190L21.5 180.3C43 170.7 86 151.3 128.8 141.7C171.7 132 214.3 132 257.2 143C300 154 343 176 385.8 180.2C428.7 184.3 471.3 170.7 514.2 163.5C557 156.3 600 155.7 642.8 153.2C685.7 150.7 728.3 146.3 771.2 148.8C814 151.3 857 160.7 878.5 165.3L900 170L900 0L0 0Z" fill="#018065"></path>
+            <path d="M0 89L21.5 90C43 91 86 93 128.8 97C171.7 101 214.3 107 257.2 109.7C300 112.3 343 111.7 385.8 113.2C428.7 114.7 471.3 118.3 514.2 120.3C557 122.3 600 122.7 642.8 127.3C685.7 132 728.3 141 771.2 136.3C814 131.7 857 113.3 878.5 104.2L900 95L900 0L0 0Z" fill="#046d57"></path>
+            <path d="M0 115L21.5 107.8C43 100.7 86 86.3 128.8 83.3C171.7 80.3 214.3 88.7 257.2 92.7C300 96.7 343 96.3 385.8 97.7C428.7 99 471.3 102 514.2 95.7C557 89.3 600 73.7 642.8 69.3C685.7 65 728.3 72 771.2 82C814 92 857 105 878.5 111.5L900 118L900 0L0 0Z" fill="#075b49"></path>
+            <path d="M0 61L21.5 56.5C43 52 86 43 128.8 40.8C171.7 38.7 214.3 43.3 257.2 43.2C300 43 343 38 385.8 36.2C428.7 34.3 471.3 35.7 514.2 38.2C557 40.7 600 44.3 642.8 47.5C685.7 50.7 728.3 53.3 771.2 53.5C814 53.7 857 51.3 878.5 50.2L900 49L900 0L0 0Z" fill="#08493b"></path>
+        </svg>
+
+      <section id="sejarah" class="about-section slide-in">
+        <div class="container container-title">
+            <div class="about-image">
+                <img src="logo ipnu.png" alt="IPNU Logo">
+            </div>
+            <h1 class="hero-title">Profil PAC IPNU Bontoala</h1>
+            <p class="container-text txt-letter">Pimpinan Anak Cabang Ikatan Pelajar Nahdlatul Ulama Kecamatan Bontoala  merupakan badan otonom Nahdlatul Ulama, yang berkecimpun pada bidang pelajar. selain itu, Pimpinan Anak Cabang atau yang biasa di singkat dengan PAC merupakan sebuah tingkatan yang menjelaskan bahwa badan otonom tersebut berada pada tingkat kecamatan, sudah jelas nya bahwa PAC IPNU Kecamatan Bontoala merupakan organisasi pelajar yang berada di bawah naungan Nahdlatul Ulama yang terletak di kecamatan Bontoala.</p><br>
+            <p class="container-text">PAC IPNU Kecamatan Bontoala terletak di Kota Makassar, Provinsi Sulawesi Selatan. Pada saat ini PAC IPNU Kecamatan Bontoala terdiri dari satu Pimpinan Komisariat, tepat nya berada di Pondok Pesantren An Nahdlah. Oleh karena itu, dalam hal ini pengurus masih dalam proses pengembangan Komisariat pada tingkat sekolah, terutama pada pesantren yang berdomisili Bontoala, serta tidak lupa juga kita tetap memperkenalkan IPNU terhadap sekolah- sekolah umum. Selain komisariat yang dimana tepat nya pada tingkat Ranting, PAC IPNU Kecamatan Bontoala belum memiliki Pimpinan Ranting.</p><br>
+            <p class="container-text">Tugas IPNU Menghimpun dan membina pelajar Nahdlatul Ulama, Mempersiapkan kader-kader intelektual sebagai penerus perjuangan bangsa, Mengusahakan tercapainya tujuan organisasi, Memanfaatkan potensi pelajar untuk kemajuan bangsa, Berperan dalam pendidikan.</p><br>
+            <div class="social-media">
+                <a href="#" class="whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                <a href="#" class="instagram"><i class="fab fa-instagram"></i> Instagram</a>
+                <a href="#" class="facebook"><i class="fab fa-facebook-f"></i> Facebook</a>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="profil-pac" class="instagram-section">
+    <div class="container">
+        <div class="instagram-grid">
+            <!-- Post 1 -->
+            <div class="instagram-post">
+                <div class="post-header">
+                    <img src="IPNU GRADIASI.png" alt="IPNU Logo" class="profile-pic">
+                    <div class="profile-info">
+                        <p class="profile-name">pacbontoala</p>
+                        <p class="followers">786 followers</p>
+                    </div>
+                    <a href="https://www.instagram.com/pelajarnubontoala/" class="view-profile">View profile</a>
+                </div>
+                <img src="img/instagram_1.jpg" alt="[IPNU PAC]" class="post-image">
+                <a href="https://www.instagram.com/p/DH0mgZjS7ec/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" class="view-more">View more on Instagram</a>
+                <div class="post-icons">
+                    <div class="icon-group">
+                        <i class="far fa-heart"></i>
+                        <i class="far fa-comment"></i>
+                        <i class="fa-regular fa-paper-plane"></i>
+                    </div>
+                    <i class="far fa-bookmark"></i>
+                </div>
+                <div class="post-content">
+                    <p class="likes-count">108 likes</p>
+                    <p class="post-title"><strong>pelajarnubontoala</strong></p>
+                    <p class="post-description">✨selamat & sukses rekan rekanita Telah lolos jalur SPAN-PTKIN✨</p>
+                    <p class="post-quote">Alhamdulilah! Selamat atas keberhasilan rekan rekanita lolos seleksi semoga Allah SWT senantiasa memberkahi dan melindungi, sukses selalu🤩</p>
+                    <p class="follow-us">Follow kami<br><a href="#">@pelajarnubontoala</a></p>
+                    <p class="follow-others">Follow juga<br>
+                        <a href="#">@pwippnu_sulsel</a><br>
+                        <a href="#">@pwipnusulsel</a><br>
+                        <a href="#">@pcipnumakassar</a><br>
+                        <a href="#">@pcippnumakassar</a><br>
+                        <a href="#">@pk.ipnuippnu_annahdlah</a><br>
+                        <a>#santri#ipnuippnu#pelajarnu
+                          #pacbontoala#pejuangspanptkin</a>
+                    </p>
+                </div>
+                <div class="post-footer">
+                    <div class="hashtags">
+                        <p>Add a comment...</p>
+                    </div>
+                    <div class="instagram-icon">
+                      <i class="fa-brands fa-instagram"></i>
+                    </div>
+                </div>
+            </div>
+            <!-- Post 2 -->
+             <div class="instagram-post">
+              <div class="post-header">
+                <img src="IPNU GRADIASI.png" alt="ipnu logo" class="profile-pic">
+                <div class="profile-info">
+                  <p class="profile-name">Pacipnubontoala</p>
+                  <p class="followers">786 followers</p>
+                </div>
+                <a href="https://www.instagram.com/pelajarnubontoala/" class="view-profile">view profile</a>
+              </div>
+              <img src="img/instagram2.jpg" alt="[IPNU PAC]" class="profile-img">
+              <a href="https://www.instagram.com/p/DEot5s0PvR8/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" class="view-more" referrerpolicy="no-referrer-when-downgrade">view more on instagram</a>
+              <div class="post-icons">
+                <div class="icon-group">
+                    <i class="far fa-heart"></i>
+                    <i class="far fa-comment"></i>
+                    <i class="fa-regular fa-paper-plane"></i>
+                </div>
+                  <i class="far fa-bookmark"></i>
+            </div>
+            <div class="post-content">
+              <p class="likes-count">66 likes</p>
+              <p class="post-title"><strong>pelajarnubontoala</strong></p>
+              <p class="post-description">✨Quotes of The Day✨</p>
+              <p class="post-quote">"Kaderisasi menjadi fondasi utama dalam suatu organisasi yang menanamkan nilai-nilai tanggung jawab, solidaritas, dan kepemimpinan. Dari sini, lahir kader-kader yang siap menghadapi tantangan dan membawa organisasi menuju kemajuan. Organisasi bukan sekedar wadah, tapi medan perjuangan. Jadilah kader Yang tidak hanya mengikuti arus, tapi mampu menciptakan gelombang besar menuju masa depan emas."</p>
+              <p class="post-quote">Heri Gunawan<br>Pembina PAC IPNU Bontoala<br>Instruktur Nasional PP IPNU</p></p>
+              <p class="post-quote">&bull;<br>&bull;<br>&bull;</p>
+              <p class="follow-us">Follow kami<br><a href="#">@pelajarnubontoala</a></p>
+              <p class="follow-others">Follow juga<br>
+                  <a href="#">@ppipnu</a><br>
+                  <a href="#">@ppippnu</a><br>
+                  <a href="#">@pwipnusulsel</a><br>
+                  <a href="#">@pwippnu_sulsel</a><br>
+                  <a href="#">@pcipnumakassar</a><br>
+                  <a href="#">@pcippnumakassar</a><br>
+                  <a href="#">@pk.ipnuippnu_annahdlah</a>
+                  <a>#santri#ipnuippnu#pelajarnu
+                    #pacbontoala#pejuangspanptkin</a>
+              </p>
+            </div>
+            <div class="post-footer">
+              <div class="hashtags">
+                  <p>Add a comment...</p>
+              </div>
+              <div class="instagram-icon">
+                <i class="fa-brands fa-instagram"></i>
+              </div>
+          </div>
+        </div>
+            <!-- Post 3 -->
+             <div class="instagram-post">
+              <div class="post-header">
+                <img src="IPNU GRADIASI.png" alt="ipnu logo" class="profile-pic">
+                <div class="profile-info">
+                  <p class="profile-name">Pacipnubontoala</p>
+                  <p class="followers">786 followers</p>
+                </div>
+                <a href="https://www.instagram.com/pelajarnubontoala/" class="view-profile">view profile</a>
+              </div>
+              <img src="img/instagram_3.jpg" alt="[IPNU PAC]" class="profile-img">
+              <a href="https://www.instagram.com/p/DGoV41DTfIB/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" class="view-more">view more on instagram</a>
+              <div class="post-icons">
+                <div class="icon-group">
+                    <i class="far fa-heart"></i>
+                    <i class="far fa-comment"></i>
+                    <i class="fa-regular fa-paper-plane"></i>
+                </div>
+                  <i class="far fa-bookmark"></i>
+            </div>
+            <div class="post-content">
+              <p class="likes-count">166 likes</p>
+              <p class="post-title"><strong>pelajarnubontoala</strong></p>
+              <p class="post-description">📢 HASIL KONFERANCAB XI PAC IPNU IPPNU KECAMATAN BONTOALA 📢</p>
+              <p class="post-quote">Alhamdulillah, PAC IPNU IPPNU Kecamatan Bontoala telah sukses melaksanakan Konferensi Anak Cabang (Konferancab) XI sebagai bagian dari proses regenerasi kepemimpinan. 🎉</p>
+              <p class="post-quote">Selamat kepada Rekan Muhammad Arham <a href="#">@arhammm09</a> sebagai Ketua IPNU dan Rekanita Regita Airin <a href="#">@regiriin</a> sebagai Ketua IPPNU Masa Bhakti 2025-2027. 🤝✨</p>
+              <p class="post-quote">Semoga amanah dalam mengemban tugas, membawa inovasi, dan semakin menguatkan peran IPNU IPPNU sebagai wadah pengembangan diri bagi pelajar dan santri di Kecamatan Bontoala. Mari bersama membangun organisasi yang lebih progresif dan berdaya guna!</p>
+              <p class="post-quote">Terima kasih kepada seluruh peserta dan pihak yang telah berkontribusi dalam suksesnya Konferancab ini. IPNU IPPNU, Belajar, Berjuang, Bertaqwa! 💚💛</p>
+              <p class="follow-us">Follow kami<br><a href="#">@pelajarnubontoala</a></p>
+              <p class="follow-others">Follow juga<br>
+                  <a href="#">@pwippnu_sulsel</a><br>
+                  <a href="#">@pwipnusulsel</a><br>
+                  <a href="#">@pcipnumakassar</a><br>
+                  <a href="#">@pcippnumakassar</a><br>
+                  <a href="#">@pk.ipnuippnu_annahdlah</a><br>
+                  <a>#santri#ipnuippnu#pelajarnu
+                    #pacbontoala#pejuangspanptkin</a>
+              </p>
+            </div>
+            <div class="post-footer">
+              <div class="hashtags">
+                  <p>Add a comment...</p>
+              </div>
+              <div class="instagram-icon">
+                <i class="fa-brands fa-instagram"></i>
+              </div>
+          </div>
+        </div>
+          <!-- Post 4 -->
+             <div class="instagram-post">
+              <div class="post-header">
+                <img src="IPNU GRADIASI.png" alt="ipnu logo" class="profile-pic">
+                <div class="profile-info">
+                  <p class="profile-name">Pacipnubontoala</p>
+                  <p class="followers">786 followers</p>
+                </div>
+                <a href="https://www.instagram.com/pelajarnubontoala/" class="view-profile">view profile</a>
+              </div>
+              <img src="img/instagram_4.jpg" alt="[IPNU PAC]" class="profile-img">
+              <a href="https://www.instagram.com/p/DHXyLJ0RUTx/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" class="view-more">view more on instagram</a>
+              <div class="post-icons">
+                <div class="icon-group">
+                    <i class="far fa-heart"></i>
+                    <i class="far fa-comment"></i>
+                    <i class="fa-regular fa-paper-plane"></i>
+                </div>
+                  <i class="far fa-bookmark"></i>
+            </div>
+            <div class="post-content">
+              <p class="likes-count">48 likes</p>
+              <p class="post-title"><strong>pelajarnubontoala</strong></p>
+              <p class="post-description">🔰 PRA PELANTIKAN PAC IPNU-IPPNU BONTOALA 🔰</p>
+              <p class="post-quote">Menjelang pelantikan, semangat para pengurus baru semakin berkobar! 🔥✨</p>
+              <p class="post-quote">Kegiatan Pra Pelantikan menjadi langkah awal dalam mempersiapkan kepengurusan yang solid, memahami tugas dan tanggung jawab, serta memperkuat komitmen dalam berkhidmat. 🤝💚💛</p>
+              <p class="post-quote">Semoga dengan bekal ini, kita siap menjalankan amanah dengan penuh dedikasi dan membawa organisasi ke arah yang lebih maju! 🚀!</p>
+              <p class="follow-us">Follow kami<br><a href="#">@pelajarnubontoala</a></p>
+              <p class="follow-others">Follow juga<br>
+                  <a href="#">@pwippnu_sulsel</a><br>
+                  <a href="#">@pwipnusulsel</a><br>
+                  <a href="#">@pcipnumakassar</a><br>
+                  <a href="#">@pcippnumakassar</a><br>
+                  <a href="#">@pk.ipnuippnu_annahdlah</a><br>
+                  <a>#santri#ipnuippnu#pelajarnu
+                    #pacbontoala#pejuangspanptkin</a>
+              </p>
+            </div>
+            <div class="post-footer">
+              <div class="hashtags">
+                  <p>Add a comment...</p>
+              </div>
+              <div class="instagram-icon">
+                <i class="fa-brands fa-instagram"></i>
+              </div>
+          </div>
+        </div>
+            <!-- Post 5 -->
+             <div class="instagram-post">
+              <div class="post-header">
+                <img src="IPNU GRADIASI.png" alt="ipnu logo" class="profile-pic">
+                <div class="profile-info">
+                  <p class="profile-name">Pacipnubontoala</p>
+                  <p class="followers">786 followers</p>
+                </div>
+                <a href="https://www.instagram.com/pelajarnubontoala/" class="view-profile">view profile</a>
+              </div>
+              <img src="img/instagram_5.jpg" alt="[IPNU PAC]" class="profile-img">
+              <a href="https://www.instagram.com/p/DHYWq-Ky7PK/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" class="view-more">view more on instagram</a>
+              <div class="post-icons">
+                <div class="icon-group">
+                    <i class="far fa-heart"></i>
+                    <i class="far fa-comment"></i>
+                    <i class="fa-regular fa-paper-plane"></i>
+                </div>
+                  <i class="far fa-bookmark"></i>
+            </div>
+            <div class="post-content">
+              <p class="likes-count">149 likes</p>
+              <p class="post-title"><strong>pelajarnubontoala</strong></p>
+              <p class="post-description">🎉SELAMAT & SUKSES REKAN-REKANITA TELAH LOLOS SNBP 🎉</p>
+              <p class="post-quote">Semoga kesuksesan ini membawa kamu kepada masa depan yang cerah dan penuh dengan kesempatan! Tetap semangat dan terus berjuang untuk meraih impianmu! 🙌</p>
+              <p class="follow-us">Follow kami<br><a href="#">@pelajarnubontoala</a></p>
+              <p class="follow-others">Follow juga<br>
+                  <a href="#">@pwippnu_sulsel</a><br>
+                  <a href="#">@pwipnusulsel</a><br>
+                  <a href="#">@pcipnumakassar</a><br>
+                  <a href="#">@pcippnumakassar</a><br>
+                  <a href="#">@pk.ipnuippnu_annahdlah</a><br>
+                  <a>#santri#ipnuippnu#pelajarnu
+                    #pacbontoala#pejuangspanptkin</a>
+              </p>
+            </div>
+            <div class="post-footer">
+              <div class="hashtags">
+                  <p>Add a comment...</p>
+              </div>
+              <div class="instagram-icon">
+                <i class="fa-brands fa-instagram"></i>
+              </div>
+          </div>
+        </div>
+            <!-- Post 6 -->
+             <div class="instagram-post">
+              <div class="post-header">
+                <img src="IPNU GRADIASI.png" alt="ipnu logo" class="profile-pic">
+                <div class="profile-info">
+                  <p class="profile-name">Pacipnubontoala</p>
+                  <p class="followers">786 followers</p>
+                </div>
+                <a href="https://www.instagram.com/pelajarnubontoala/" class="view-profile">view profile</a>
+              </div>
+              <img src="img/instagram_6.jpg" alt="[IPNU PAC]" class="profile-img">
+              <a href="https://www.instagram.com/p/DHXSuf-yQX5/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" class="view-more">view more on instagram</a>
+              <div class="post-icons">
+                <div class="icon-group">
+                    <i class="far fa-heart"></i>
+                    <i class="far fa-comment"></i>
+                    <i class="fa-regular fa-paper-plane"></i>
+                </div>
+                  <i class="far fa-bookmark"></i>
+            </div>
+            <div class="post-content">
+              <p class="likes-count">35 likes</p>
+              <p class="post-title"><strong>pelajarnubontoala</strong></p>
+              <p class="post-description">🤝 SOWAN & SILATURAHMI 🤝</p>
+              <p class="post-quote">PAC IPNU-IPPNU Kecamatan Bontoala berkesempatan untuk sowan dan bersilaturahmi dengan MWC NU Kecamatan Bontoala, Ust. Ahmad Syahrudin Aziz. 🌿✨</p>
+              <p class="post-quote">Kegiatan ini menjadi momen penting untuk memperkuat hubungan serta mendapatkan arahan dan nasihat dalam berkhidmat di organisasi.</p>
+              <p class="post-quote">Semoga silaturahmi ini semakin mempererat sinergi dan membawa keberkahan bagi perjuangan IPNU-IPPNU ke depan. Aamiin 🤲💚💛</p>
+              <p class="follow-us">Follow kami<br><a href="#">@pelajarnubontoala</a></p>
+              <p class="follow-others">Follow juga<br>
+                  <a href="#">@pwippnu_sulsel</a><br>
+                  <a href="#">@pwipnusulsel</a><br>
+                  <a href="#">@pcipnumakassar</a><br>
+                  <a href="#">@pcippnumakassar</a><br>
+                  <a href="#">@pk.ipnuippnu_annahdlah</a><br>
+                  <a>#santri#ipnuippnu#pelajarnu
+                    #pacbontoala#pejuangspanptkin</a>
+              </p>
+            </div>
+            <div class="post-footer">
+              <div class="hashtags">
+                  <p>Add a comment...</p>
+              </div>
+              <div class="instagram-icon">
+                <i class="fa-brands fa-instagram"></i>
+              </div>
+          </div>
+        </div>
+    </div>
+</section>
+
+
+    <footer class="footer-section fade-in">
+        <div class="container">
+          <div class="footer-content">
+            <div class="footer-about">
+              <div class="footer-logo">
+                <img src="logo ipnu.png" alt="IPNU Logo">
+                <h3>IPNU BONTOALA</h3>
+              </div>
+            </div>
+            <div class="footer-contact">
+              <h3>Kontak Info</h3>
+              <ul>
+                <li>
+                  <i class="fa-solid fa-location-dot"></i>
+                  <p>Jl. Perintis Kemerdekaan No. 123, Tamalanrea, Kota Makassar, Sulawesi Selatan, 90245</p>
+                </li>
+                <li>
+                  <i class="fa-solid fa-phone"></i>
+                  <p>+62 812-3456-7890</p>
+                </li>
+                <li>
+                  <i class="fa-solid fa-envelope"></i>
+                  <p>info@ipnubontoala.org</p>
+                </li>
+              </ul>
+            </div>
+            <div class="footer-map">
+              <h3>Lokasi</h3>
+              <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15879.064429750222!2d119.41196184303046!3d-5.133099235116642!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dbee1748cfc07a5%3A0xf269b3341210c7a9!2sBontoala%2C%20Kota%20Makassar%2C%20Sulawesi%20Selatan!5e0!3m2!1sid!2sid!4v1694531021826!5m2!1sid!2sid" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <p>© 2025 PAC IPNU Kec.Botoala . All rights reserved.</p>
+            <button id="scroll-top" class="scroll-top-btn">
+              <i class="fa-solid fa-arrow-up"></i>
+            </button>
+          </div>
+        </div>
+      </footer>
+    <script src="js/profil-pac.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</body>
+</html>

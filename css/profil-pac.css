@@ -1,0 +1,1618 @@
+@font-face {
+    font-family: "regular";
+    src: url("/fonts/Bebas_Neue/BebasNeue-Regular.ttf");
+  }
+  @font-face {
+    font-family: "geova";
+    src: url("/fonts/geova/GeovaTrial-Black.ttf");
+  }
+  
+  :root {
+    --green-primary: #1b6853;
+    --green-light: #8DB193;
+    --green-teal: #82b0a9;
+    --gray: #4b5563;
+    --dark-gray: #374151;
+    --white: #ffffff;
+    --light-green-bg: rgba(141, 177, 147, 0.1);
+    --transition: all 0.3s ease;
+  }
+  
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+  }
+  
+  /*styles*/
+  
+  body {
+    font-family: 'Poppins' ,sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 25px;
+    /* background-color: var(--green-teal); */
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  img {
+    max-width: 100%;
+  }
+  
+  
+  /*header*/
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 0;
+    z-index: 1000;
+    background-color: transparent;
+    transition: var(--transition);
+  }
+  
+  header.scrolled {
+    background-color: rgba(255, 255, 255, 0.95); /* Warna putih transparan */
+    backdrop-filter: blur(5px); /* Efek blur */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Bayangan */
+    transition: var(--transition); /* Transisi halus */
+  }
+  
+  header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    color: var(--white);
+    /* font-weight: 6500; */
+    font-size: 1.9rem;
+  }
+  
+  .ipnu{
+    color: var(--green-primary);
+    font-weight: 1000;
+    font-family: 'regular';
+  }
+  
+  .bontoala {
+    color: black;
+    font-weight: 1000;
+    font-family: 'regular';
+  }
+  
+  nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .nav-links a {
+    color: var(--green-primary);
+    font-weight: 600;
+    font-size: 0.9rem;
+    position: relative;
+    padding: 0.5rem 0;
+  }
+  
+  .nav-links a.active::after,
+  .nav-links a:hover::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2.5px;
+    width: 100%;
+    border-radius: 20px;
+    background-color: var(--green-primary);
+  }
+  
+  
+  /* Sidebar styling sesuai dengan gambar */
+  .sidebar {
+    display: none;
+  }
+  
+  .sidebar-toggle {
+    display: none;
+  }
+  
+  /* Efek Aktif dan Hover */
+  .sidebar-nav-links a.active,
+  .sidebar-nav-links a:hover {
+    background-color: var(--green-light);
+    color: white;
+    font-weight: bold;
+  }
+  
+  .navbar-right {
+    display: flex;
+    align-items: center;
+  }
+
+  /*styel dripdown*/
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-radius: 5px;
+    overflow: hidden;
+    min-width: 200px;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  }
+
+  .dropdown-content li {
+    width: 100%;
+  }
+
+  .dropdown-content a {
+    padding: 12px 10px;
+    display: block;
+    color: var(--green-primary);
+    text-decoration: none;
+    background: #fff;
+    transition: background 0.3s, color 0.3s;
+  }
+
+  .dropdown-content a:hover {
+    color: var(--green-primary);
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /*social-icon*/
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+  }
+  
+  .social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    transition: var(--transition);
+  }
+  
+  .whatsapp1 {
+    background-color: #25D366;
+    color: white;
+  }
+  
+  .instagram1 {
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    color: white;
+  }
+  
+  .facebook1 {
+    background-color: #1877F2;
+    color: white;
+  }
+  
+  .social-icons2 {
+    display: flex;
+    justify-self: center;
+    gap: 10px;
+    margin: 10px;
+  }
+  
+  .social-icon2 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    transition: var(--transition);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    overflow: hidden;
+  }
+  
+  .facebook2 {
+    background-color: #1877F2;
+    color: white;
+  }
+  
+  .instagram2 {
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    color: white;
+  }
+  
+  .whatsapp2 {
+    background-color: #25D366;
+    color: white;
+  }
+  
+  .social-icon2:hover,
+  .social-icon:hover {
+    transform: scale(1.2);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  
+  .social-icon2::before,
+  .social-icon::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    transform: scale(0);
+    z-index: -1;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .social-icon2:hover::before,
+  .social-icon:hover::before{
+    transform: scale(1);
+  }
+
+  .social-media {
+    display: flex;
+    gap: 15px;
+    margin: 9px 0;
+  }
+  
+  .social-media a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    padding-left: 0;
+    gap: 10px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .facebook {
+    width: 120px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: #1877F2;
+    color: white;
+  }
+  
+  .instagram {
+    width: 120px;
+    height: 40px;
+    border-radius: 10px;
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    color: white;
+  }
+  
+  .whatsapp {
+    width: 120px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: #25D366;
+    color: white;
+  }
+  
+  .social-media a:hover {
+    transform: scale(1.2); /* Membesarkan ikon secara lebih signifikan */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Tambahkan bayangan lebih lembut */
+  }
+  
+  .social-media a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    transform: scale(0);
+    z-index: -1;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .social-media a:hover::before {
+    transform: scale(1);
+  }
+  
+  /* .social-links {
+    display: flex;
+    gap: 1rem;
+    margin: 9px 0;
+  }
+  
+  .social-links a {
+    overflow: hidden;
+    gap: 10px;
+    position: relative;
+    padding-left: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+  }
+  
+  .facebook {
+    background-color: #1877F2;
+    color: white;
+  }
+  
+  .instagram {
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    color: white;
+  }
+  
+  .whatsapp {
+    background-color: #25D366;
+    color: white;
+  }
+  
+  .social-links a:hover {
+    transform: scale(1.2); 
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); 
+  }
+  
+  .social-links a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: inherit;
+    transform: scale(0);
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    z-index: -1;
+  }
+  
+  .social-links a:hover::before {
+    transform: scale(1);
+    opacity: 1;
+  } */
+
+  /* About Section */
+  .about-section {
+    display: flex;
+    justify-content: center;
+    padding: 10rem 7rem;
+    z-index: 0;
+  }
+  
+
+  /*hero section*/
+
+  /* .container-title {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+  } */
+
+  /* Atur posisi logo */
+  .about-image {
+    position: absolute;
+    top: 250px; /* Atur ketinggian sesuai kebutuhan */
+    right: 60px; /* Geser ke kanan */
+    z-index: 10; /* Pastikan berada di atas */
+  }
+
+  .about-image img {
+    width: 250px; /* Sesuai permintaan */
+    height: auto; /* Agar aspek rasio tetap */
+  }
+  .hero-title {
+    color: var(--white);
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 15rem;
+  }
+
+  .txt-letter::first-letter {
+    font-size: 40px;
+    font-weight: 800;
+    color: #007a5e;
+  }
+
+  .container-text {
+    font-weight: 500;
+    font-size: 1.1rem;
+  }
+
+  .background-svg {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+ }
+
+ .background-svg svg {
+    position: absolute;
+    top: 110px;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: -1;
+ }
+
+ .background-svg path {
+    opacity: 0;
+    animation: fadeInMove 1s ease-in-out forwards;
+  }
+
+  /* Layer ganjil dari kiri */
+  .background-svg path:nth-child(odd) {
+      transform: translateX(-100px);
+  }
+
+  /* Layer genap dari kanan */
+  .background-svg path:nth-child(even) {
+      transform: translateX(100px);
+  }
+
+/* Animasi muncul */
+  @keyframes fadeInMove {
+      0% {
+          opacity: 0;
+          transform: translateX(0);
+      }
+      100% {
+          opacity: 1;
+          transform: translateX(0);
+      }
+  }
+
+  /* Delay agar muncul satu per satu */
+  .background-svg path:nth-child(1) { animation-delay: 0.5s; }
+  .background-svg path:nth-child(2) { animation-delay: 1s; }
+  .background-svg path:nth-child(3) { animation-delay: 1.5s; }
+  .background-svg path:nth-child(4) { animation-delay: 2s; }
+  .background-svg path:nth-child(5) { animation-delay: 2.5s; }
+
+
+/* Styling for Instagram Section */
+.instagram-section {
+  padding: 50px 20px;
+  background-color: transparent ;
+  font-family: 'Poppins', sans-serif;
+}
+
+.instagram-section .section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.instagram-post {
+  width: 100%;
+  max-width: 400px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.post-header {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.profile-info {
+  flex-grow: 1;
+}
+
+.profile-name {
+  font-weight: bold;
+  margin: 0;
+}
+
+.followers {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0;
+}
+
+.view-profile {
+  font-size: 0.9rem;
+  color: #009473;
+  text-decoration: none;
+  font-weight: bold;
+  border: 1px solid #009473;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.view-profile:hover {
+  background-color: #009473;
+  color: #fff;
+}
+
+.post-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.post-caption {
+  padding: 15px;
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+.post-caption p {
+  margin: 0 0 10px;
+}
+
+.post-caption a {
+  color: #0095f6;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.post-caption a:hover {
+  text-decoration: underline;
+}
+
+.view-more {
+  display: inline-block;
+  margin-top: 10px;
+  color: #0095f6;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.view-more:hover {
+  text-decoration: underline;
+}
+
+.post-footer {
+  padding: 10px 15px;
+  border-top: 1px solid #ddd;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.likes-comments {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.likes-comments p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.likes-comments i {
+  color: #e74c3c;
+  margin-right: 5px;
+}
+
+.post-footer i {
+  color: #e74c3c;
+  margin-right: 5px;
+}
+
+.post-caption {
+    text-align: left;
+    margin-top: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: #333;
+}
+
+.post-caption .post-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.post-caption .post-description {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.post-caption .post-quote {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.post-caption .follow-us,
+.post-caption .follow-others {
+    margin-bottom: 10px;
+}
+
+.post-caption a {
+    color: #009473;
+    text-decoration: none;
+}
+
+.post-caption a:hover {
+    text-decoration: underline;
+}
+
+.post-footer {
+    margin-top: 15px;
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+}
+
+.post-footer .likes-comments {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #555;
+}
+
+.post-footer .likes-comments i {
+    margin-right: 5px;
+    color: #e74c3c;
+}
+
+.post-footer .hashtags {
+    margin-top: 10px;
+    font-size: 12px;
+    color: #777;
+    line-height: 1.5;
+}
+
+.post-icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    padding: 0 10px;
+    font-size: 20px;
+    color: #555;
+}
+
+.post-icons .icon-group {
+    display: flex;
+    gap: 15px; /* Jarak antar ikon di grup kiri */
+}
+
+.post-icons i {
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+
+.likes-count {
+    margin-top: 6px;
+    font-size: 14px;
+    color: #333;
+    text-align: left;
+    padding-left: 10px;
+}
+
+/* Styling untuk Post 1 */
+.instagram-post {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    background-color: #fff;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.profile-info {
+    flex-grow: 1;
+}
+
+.profile-name {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.followers {
+    font-size: 12px;
+    color: #888;
+}
+
+.view-profile {
+    font-size: 12px;
+    color: #0095f6;
+    text-decoration: none;
+    font-weight: bold;
+    border: 1px solid #0095f6;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.view-profile:hover {
+    background-color: #0095f6;
+    color: #fff;
+}
+
+.view-more {
+    display: block;
+    font-size: 14px;
+    color: #0095f6;
+    text-decoration: none;
+    margin: 10px 0;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+
+.post-icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    font-size: 20px; /* Ukuran ikon */
+    color: #000000;
+}
+
+.post-icons .icon-group {
+    display: flex;
+    gap: 15px; /* Jarak antar ikon di grup kiri */
+}
+
+
+.post-content {
+    padding: 10px;
+}
+
+.likes-count {
+    font-size: 16px;
+    font-weight: 900;
+    margin-bottom: 1px;
+    padding: 0;
+}
+
+.post-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.post-description,
+.post-quote,
+.follow-us,
+.follow-others {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.follow-us a,
+.follow-others a,
+.post-quote a {
+    color: #009473;
+    text-decoration: none;
+}
+
+.post-footer {
+    padding: 10px;
+    border-top: 1px solid #ddd;
+}
+
+.hashtags {
+    font-size: 12px;
+    color: #888;
+}
+
+
+/* Styling untuk Instagram Post */
+.instagram-post {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    background-color: #fff;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.profile-info {
+    flex-grow: 1;
+}
+
+.profile-name {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.followers {
+    font-size: 12px;
+    color: #888;
+}
+
+.view-profile {
+    font-size: 12px;
+    color: #0095f6;
+    text-decoration: none;
+    font-weight: bold;
+    border: 1px solid #0095f6;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.view-profile:hover {
+    background-color: #0095f6;
+    color: #fff;
+}
+
+.post-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.post-icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 12px;
+    font-size: 25px; /* Ukuran ikon */
+    color: #000000;
+}
+
+.post-icons .icon-group {
+    display: flex;
+    gap: 15px; /* Jarak antar ikon di grup kiri */
+}
+
+
+.post-content {
+    padding:0 10px;
+}
+
+.likes-count {
+    font-size: 16px;
+    font-weight: 900;
+    margin-bottom: 1px;
+    padding: 0;
+}
+
+.post-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.post-description,
+.post-quote,
+.follow-us,
+.follow-others {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.follow-us a,
+.follow-others a {
+    color: #009473;
+    text-decoration: none;
+}
+
+.post-footer {
+    padding: 10px;
+    border-top: 1px solid #ddd;
+}
+
+.hashtags {
+    font-size: 12px;
+    color: #888;
+}
+
+.post-footer {
+    display: flex;
+    justify-content: space-between; /* Membuat elemen tersebar */
+    align-items: center;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+}
+
+.post-footer .hashtags {
+    font-size: 14px;
+    color: #888;
+}
+
+.post-footer .instagram-icon {
+    font-size: 20px; /* Ukuran ikon Instagram */
+    color: #000000; /* Warna ikon Instagram */
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.post-footer .instagram-icon:hover {
+    color: #000000; /* Warna saat hover */
+    transform: scale(1.2); /* Efek membesar saat hover */
+}
+
+/* Styling untuk Instagram Grid */
+.instagram-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsif */
+  gap: 5px; /* Jarak antar post */
+  justify-content: center;
+}
+
+/* Styling untuk Instagram Post */
+.instagram-post {
+  display: flex;
+  flex-direction: column; /* Pastikan elemen diatur secara vertikal */
+  justify-content: space-between; /* Footer selalu di bawah */
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.instagram-post:hover {
+  transform: translateY(-5px); /* Efek hover */
+}
+
+/* Styling untuk Footer Post */
+.post-footer {
+  display: flex;
+  justify-content: space-between; /* Elemen tersebar di footer */
+  align-items: center;
+  padding: 10px 15px;
+  border-top: 1px solid #ddd;
+  margin-top: auto; /* Pastikan footer berada di bawah */
+}
+
+.post-footer .hashtags {
+  font-size: 14px;
+  color: #777;
+}
+
+.post-footer .instagram-icon i {
+  font-size: 20px;
+  color: #009473;
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.post-footer .instagram-icon i:hover {
+  transform: scale(1.2);
+  color: #007a5e;
+}
+
+/* Footer */
+  .footer-section {
+    background-color: var(--white);
+    padding: 5rem 0 2rem;
+  }
+  
+  .footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+    margin-bottom: 3rem;
+  }
+  
+  .footer-about {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Agar kontennya berada di tengah */
+    text-align: center; /* Pusatkan teks */
+    padding: 0; /* Sesuaikan ukuran padding jika perlu */
+  }
+  
+  .footer-logo {
+    display: flex; 
+    flex-direction: column; /* Logo di atas teks */
+    align-items: center; 
+    gap: 0.3rem; /* Mengurangi jarak antara logo dan teks */
+    margin-bottom: 1rem; /* Sesuaikan jika perlu */
+  }
+  
+  .footer-logo img {
+    width: 190px; /* Set the width to 200px */
+    height: 130px; /* Set the height to 200px */
+    object-fit: contain;
+    margin-right: 0; /* Center the image */
+  }
+  
+  .footer-logo h3 {
+    color: var(--green-primary);
+    font-size: 2rem;
+    margin: 0; /* Add some space between the image and the text */
+  }
+  
+  /* .footer-about p {
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+  } */
+  
+  .footer-contact h3,
+  .footer-map h3 {
+    color: var(--green-primary);
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .footer-contact ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .footer-contact li {
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  .footer-contact i {
+    color: var(--green-primary);
+    margin-right: 0.8rem;
+    margin-top: 0.2rem;
+  }
+  
+  .footer-contact p {
+    font-size: 0.9rem;
+  }
+  
+  .map-container {
+    height: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  .map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+  
+  .footer-bottom {
+    padding-top: 2rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .footer-bottom p {
+    font-size: 0.9rem;
+    color: var(--gray);
+  }
+  
+  .scroll-top-btn {
+    background-color: var(--green-primary);
+    color: var(--white);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    transition: var(--transition);
+  }
+  
+  .scroll-top-btn:hover {
+    transform: translateY(-3px);
+  }
+  
+  /* Animation Classes */
+  .fade-in {
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+  }
+  
+  .slide-in {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: slideIn 0.8s ease forwards 0.3s;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @media screen and (max-width: 1280px) {
+    .container{
+      max-width: 100%;
+    }
+  
+    .about-content {
+      flex-direction: column-reverse;
+      gap: 2rem;
+    }
+  
+    .about-image {
+      margin-bottom: 1rem;
+    }
+  
+    .hero-title {
+      font-size: 2.5rem;
+    }
+  
+  }
+  
+  @media screen and (max-width: 768px) {
+  .about-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2.5rem 3rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .about-image {
+    position: relative;
+    top: 145px; /* Atur ketinggian sesuai kebutuhan */
+    right: auto;
+    left: 120%; 
+    transform: translateX(-50%);
+    z-index: 1;
+  }
+
+  .about-image img {
+    width: 165px;
+    height: auto;
+  }
+
+  .hero-title {
+    font-size: 2.2rem;
+    margin-bottom: 8rem;
+    z-index: 2;
+  }
+
+  .background-svg {
+    width: 110%;
+    height: auto;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+
+    header .container {
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+    }
+  
+    .navbar-right {
+      display: none;
+    }
+  
+    .sidebar {
+      display: flex; /* Tampilkan sidebar */
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 300px;
+      background-color: #fff;
+      z-index: 1100; /* Changed z-index here */
+      box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+      flex-direction: column;
+      padding: 1rem;
+      transform: translateX(-100%); /*Awalnya tersembunyi */
+      transition: transform 0.3s ease-in-out;
+    }
+  
+    .sidebar.open {
+      transform: translateX(0); /* Sidebar muncul */
+    }
+  
+    .sidebar-overlay {
+      display: block; /* Overlay untuk menutupi layar */
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 999;
+    }
+  
+    .sidebar-toggle {
+      display: block; /* Tombol toggle terlihat */
+    }
+  
+    .sidebar-overlay.active {
+    display: block;
+  }
+  
+  .sidebar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #ccc;
+  }
+  
+  .sidebar-logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: black;
+    text-transform: lowercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+  }
+  
+  .sidebar-logo .ipnu {
+    color: var(--green-primary);
+    font-family: 'regular';
+    font-size: 2.2rem;
+  }
+  
+  .sidebar-logo .bontoala {
+    color: black;
+    font-family: 'regular';
+    font-size: 2.2rem;
+  }
+  
+  .close-sidebar {
+    position: absolute;
+    right: 7.5px;
+    top: 0;
+    font-size: 1.5rem;
+    color: black;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .sidebar-toggle {
+    position: absolute;
+    top: 16px;
+    left: 10px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--dark-gray);
+    z-index: 1100;
+    padding: 10px;
+  }
+  
+  .sidebar-content {
+    flex-grow: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 0;
+  }
+  
+  .sidebar-nav {
+    margin-top: 1px;
+  }
+  
+  .sidebar-nav-links {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sidebar-nav-links li {
+    padding: 5px 0;
+  }
+  
+  .sidebar-nav-links a {
+    display: block;
+    align-items: center;
+    padding: 12px 105px;
+    color: black;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: var(--transition);
+  } 
+
+  /* Dropdown container */
+.sidebar-dropdown {
+  position: relative;
+}
+
+/* Tombol dropdown */
+.sidebar-dropbtn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background: none;
+  border: none;
+  color: black;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 12px 105px;
+  text-align: left;
+  cursor: pointer;
+  
+}
+
+/* Icon dropdown */
+.sidebar-dropbtn li {
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Jika dropdown terbuka, rotasi ikon */
+.sidebar-dropdown.active .sidebar-dropbtn i {
+  transform: rotate(180deg);
+}
+
+.sidebar-dropdown.active .sidebar-dropbtn {
+  background-color: var(--green-light); /* Sesuaikan warna */
+  color: white; /* Kontras dengan background */
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* Konten dropdown (awalnya tersembunyi) */
+.sidebar-dropdown-content {
+  display: none;
+  flex-direction: column;
+  background-color:white;
+  padding-left: 1px;
+}
+
+/* Tampilkan dropdown ketika aktif */
+.sidebar-dropdown.active .sidebar-dropdown-content {
+  display: flex;
+}
+
+/* Styling link dalam dropdown */
+.sidebar-dropdown-content a {
+  display: block;
+  padding: 9px 9px;
+  color: black;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.sidebar-dropdown-content a:hover {
+  background: #e9ecef;
+  border-radius: 5px;
+  background-color: var(--green-light);
+}
+
+  
+    .logo{
+      font-size: 2rem;
+    }
+  
+    .nav-links {
+      display: none;
+    }
+
+    .social-media {
+      display: flex;
+      gap: 16px;
+      margin: 9px 0;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+
+  }
+  
+  @media screen and (max-width: 480px) {
+  
+    .mobile-menu-btn {
+      display: none;
+    }
+  
+    
+    .hero-section .container {
+      padding: 2rem 1rem;
+    }
+    
+    
+    .footer-bottom {
+      flex-direction: column;
+      gap: 1rem;
+    }
+    
+    .footer-bottom p {
+      text-align: center;
+    }
+
+    .sidebar {
+      width: 200px;
+    }
+
+    .sidebar-nav-links a {
+      font-size: 0.9rem;
+      padding: 10px 52px;
+    }
+
+    .sidebar-logo .ipnu {
+      font-size: 1.9rem;
+    }
+
+    .sidebar-logo .bontoala {
+      font-size: 1.9rem;
+    }
+
+    .close-sidebar {
+      font-size: 1.3rem;
+      right: 7.5px;
+      top: 1.9px;
+    }
+
+    .social-icon {
+      font-size: 1.4rem;
+      width: 30px;
+      height: 30px;
+      border-radius: 9px;
+    }
+
+    /* .social-media {
+      display: flex;
+      gap: 16px;
+      margin: 9px 0;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .social-media a{
+      font-size: 1.3rem;
+      text-decoration: none;
+      width: 210px;
+      height: 44px;
+    } */
+
+    .container-title {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .about-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2.5rem 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+  
+    .about-image {
+      position: relative;
+      top: 100px; /* Atur ketinggian sesuai kebutuhan */
+      right: auto;
+      left: 125%; 
+      transform: translateX(-50%);
+      z-index: 0;
+    }
+  
+    .about-image img {
+      width: 115px;
+      height: auto;
+    }
+  
+    .hero-title {
+      font-size: 1.3rem;
+      margin-bottom: 5rem;
+      z-index: 2;
+    }
+  
+    .background-svg {
+      width: 100%;
+      height: auto;
+      position: relative;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+
+}
